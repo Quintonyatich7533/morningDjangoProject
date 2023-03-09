@@ -11,6 +11,7 @@
                     <th class="text-warning">Price</th>
                     <th class="text-warning">Delete</th>
                     <th class="text-warning">Update</th>
+                    <th class="text-warning">Payment</th>
                 </tr>
                 {% for product in products %}
                     <tr>
@@ -19,6 +20,7 @@
                         <td>{{ product.prod_price }}</td>
                         <td><a class="btn btn-danger" href="/delete-product/{{ product.id }}">Delete</a></td>
                         <td><a class="btn btn-success" href="/update-product/{{ product.id }}">Update</a></td>
+                        <td><a class="btn btn-success "href="/pay/{{ product.id }}">Pay via MPESA</a></td>
                     </tr>
                 {% endfor %}
 
